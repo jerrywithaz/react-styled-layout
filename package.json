@@ -1,0 +1,11 @@
+{
+  "name": "react-styled-layout",
+  "version": "1.0.0",
+  "description": "Responsive layout components based on css flexbox and bootsrap grid system",
+  "main": "index.tj",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Zerry Hogan",
+  "license": "MIT"
+}
