@@ -1,6 +1,6 @@
 {
   "name": "react-styled-layout",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Responsive layout components based on css flexbox and bootsrap grid system",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
@@ -16,6 +16,7 @@
   },
   "author": "Zerry Hogan",
   "license": "MIT",
+  "keywords": ["react", "styled-components", "flexbox", "css"],
   "devDependencies": {
     "@babel/core": "^7.12.10",
     "@storybook/addon-actions": "^6.1.11",

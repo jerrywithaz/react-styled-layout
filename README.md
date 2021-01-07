@@ -20,11 +20,13 @@ The `FlexItem` component is meant to be used as columns that can adjust to the u
 
 ## Example Usage
 
+### Horizontal Columns
+
 Below is an example of using the `FlexBox` component in conjuction with the `FlexItem`. We set up a 3 column grid where the widths of each column
 are dynamically adjusted based on the users screen size.
 
 ```tsx
-import { FlexBox, FlexItem } from 'react-styled-layout';
+import { FlexBox, FlexItem } from "react-styled-layout";
 
 const MyComponent = () => {
   return (
@@ -39,6 +41,32 @@ const MyComponent = () => {
         Column 3
       </FlexItem>
     </FlexBox>
+  );
+};
+```
+
+### Grid System
+
+Below is an example of using the `FlexBox` component in conjuction with the `FlexItem`. We set up a 3 column grid where the widths of each column
+are dynamically adjusted based on the users screen size.
+
+```tsx
+import { HorizontalFlexBox, FlexItem } from "react-styled-layout";
+
+const MyComponent = () => {
+  return (
+    <HorizontalFlexBox
+      flexWrap="wrap"
+      background="#efefef"
+      width="100%"
+      height="100%"
+    >
+      {new Array(20).fill(null).map((_, i) => (
+        <FlexItem sm={12} md={6} lg={4} xl={3} initial={3}>
+          Tile {i + 1}
+        </FlexItem>
+      ))}
+    </HorizontalFlexBox>
   );
 };
 ```
