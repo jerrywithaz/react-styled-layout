@@ -1,13 +1,13 @@
 import React from "react";
 import { Meta } from "@storybook/react/types-6-0";
 
-import { FlexBox, HorizontalFlexBox, VerticalFlexBox } from "./FlexBox";
-import FlexItem from "../FlexItem";
-import { FlexBoxStoryComponent } from "./FlexBox.dev";
+import FlexBox, { HorizontalFlexBox, VerticalFlexBox } from "../FlexBox";
+import FlexItem from "./FlexItem";
+import { FlexItemStoryComponent } from "./FlexItem.dev";
 
 export default {
-  title: "FlexBox",
-  component: FlexBoxStoryComponent,
+  title: "FlexItem",
+  component: FlexItemStoryComponent,
   parameters: {
     jest: [],
   },

@@ -1,9 +1,13 @@
+import React from 'react';
 import styled, { css } from 'styled-components';
 import isNumber from 'lodash/isNumber';
 import { FlexBoxProps } from './FlexBox.types';
 import cssProp from '../../utils/cssProp';
 
-export const FlexBox = styled.div<FlexBoxProps>`
+/**
+ * The `FlexBox` component makes it easy to build flex layouts.
+ */
+const FlexBox = styled.div<FlexBoxProps>`
   display: flex;
   box-sizing: border-box;
   ${({
@@ -37,12 +41,12 @@ export const FlexBox = styled.div<FlexBoxProps>`
   `}
 `;
 
-export const HorizontalFlexBox = styled(FlexBox)`
+const HorizontalFlexBox = styled(FlexBox)`
     flex-direction: row;
 `;
 
-export const VerticalFlexBox = styled(FlexBox)`
+const VerticalFlexBox = styled(FlexBox)`
     flex-direction: column;
 `;
 
-export default FlexBox;
+export { FlexBox, HorizontalFlexBox, VerticalFlexBox };
