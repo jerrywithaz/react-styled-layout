@@ -41,6 +41,36 @@ export const Tiles = () => (
   </HorizontalFlexBox>
 );
 
+export const Card = () => (
+  <FlexBox
+    width="100%"
+    height="100%"
+    background="#efefef"
+    alignItems="center"
+    justifyContent="center"
+  >
+    <VerticalFlexBox
+      flexWrap="wrap"
+      background="#ffffff"
+      width={300}
+      height={200}
+      style={{ boxShadow: "0px 0px 25px rgba(0, 0, 0, .1)", borderRadius: 4 }}
+      justifyContent="space-between"
+      padding={12}
+    >
+      <HorizontalFlexBox>
+        Header
+      </HorizontalFlexBox>
+      <FlexBox flex={1}>
+        Content
+      </FlexBox>
+      <FlexBox>
+        Footer
+      </FlexBox>
+    </VerticalFlexBox>
+  </FlexBox>
+);
+
 export const PageLayout = () => (
   <VerticalFlexBox width="100%" height="100%">
     <FlexItem

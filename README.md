@@ -47,8 +47,7 @@ const MyComponent = () => {
 
 ### Grid System
 
-Below is an example of using the `FlexBox` component in conjuction with the `FlexItem`. We set up a 3 column grid where the widths of each column
-are dynamically adjusted based on the users screen size.
+Below is an example of using the `FlexBox` component in conjuction with the `FlexItem` to create a responsive grid system.
 
 ```tsx
 import { HorizontalFlexBox, FlexItem } from "react-styled-layout";
@@ -67,6 +66,32 @@ const MyComponent = () => {
         </FlexItem>
       ))}
     </HorizontalFlexBox>
+  );
+};
+```
+
+### Card With Header, Content and footer
+
+Below is an example of using the `FlexBox` component in conjuction with the `FlexItem` to build a card component
+that has a header, content and footer.
+
+```tsx
+import { HorizontalFlexBox, FlexItem } from "react-styled-layout";
+
+const MyComponent = () => {
+  return (
+    <VerticalFlexBox
+      flexWrap="wrap"
+      background="#ffffff"
+      width={300}
+      height={200}
+      justifyContent="space-between"
+      padding={12}
+    >
+      <HorizontalFlexBox>Header</HorizontalFlexBox>
+      <FlexBox flex={1}>Content</FlexBox>
+      <FlexBox>Footer</FlexBox>
+    </VerticalFlexBox>
   );
 };
 ```
