@@ -1,15 +1,14 @@
 import styled, { css } from "styled-components";
 import isNumber from "lodash/isNumber";
+import FlexBox from "../FlexBox";
 import { responsiveProp } from "../../utils/breakpoints";
 import cssProp from "../../utils/cssProp";
 import { DEFAULT_COLUMN_WIDTH } from "../../constants";
 import { FlexItemProps } from "./FlexItem.types";
 
-const FlexItem = styled.div<FlexItemProps>`
+const FlexItem = styled(FlexBox)<FlexItemProps>`
   position: relative;
   flex: 1 1 auto;
-  padding-left: 15px;
-  padding-right: 15px;
   ${({
     xl,
     lg,
@@ -22,7 +21,18 @@ const FlexItem = styled.div<FlexItemProps>`
     flexBasis,
     flexGrow,
     flexShrink,
+    initial,
+    displayFlex = false,
   }) => css`
+    display: ${displayFlex ? "flex" : "initial"};
+    ${cssProp(
+      "flex-basis",
+      initial ? `${initial * DEFAULT_COLUMN_WIDTH}%` : undefined
+    )};
+    ${cssProp(
+      "max-width",
+      initial ? `${initial * DEFAULT_COLUMN_WIDTH}%` : undefined
+    )};
     ${responsiveProp("flex-basis", [
       { xl: xl ? `${xl * DEFAULT_COLUMN_WIDTH}%` : undefined },
       { lg: lg ? `${lg * DEFAULT_COLUMN_WIDTH}%` : undefined },
@@ -47,7 +57,10 @@ const FlexItem = styled.div<FlexItemProps>`
       "flex-grow",
       isNumber(flexGrow) ? flexGrow.toString() : flexGrow
     )};
-    ${cssProp("flex-shrink", flexShrink)};
+    ${cssProp(
+      "flex-shrink",
+      isNumber(flexShrink) ? flexShrink.toString() : flexShrink
+    )};
     ${cssProp("order", isNumber(order) ? order.toString() : order)};
   `}
 `;

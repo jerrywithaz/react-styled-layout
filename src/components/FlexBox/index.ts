@@ -1,2 +1,2 @@
 export type { FlexBoxProps } from './FlexBox.types';
-export { default } from './FlexBox';
+export { default, HorizontalFlexBox, VerticalFlexBox } from './FlexBox';
