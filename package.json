@@ -2,8 +2,14 @@
   "name": "react-styled-layout",
   "version": "1.0.0",
   "description": "Responsive layout components based on css flexbox and bootsrap grid system",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "jsnext:main": "dist/index.es.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
+    "build": "rollup -c",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Zerry Hogan",
@@ -14,6 +20,11 @@
     "@types/react-dom": "^17.0.0",
     "@types/styled-components": "^5.1.7",
     "csstype": "^3.0.5",
+    "rollup": "^2.36.1",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-typescript2": "^0.29.0",
     "typescript": "^4.1.3"
   },
   "dependencies": {},
