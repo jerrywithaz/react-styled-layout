@@ -13,8 +13,8 @@ export default {
   },
 } as Meta;
 
-export const Simple3Column = () => (
-  <FlexBox>
+export const Simple3Column = (args: any) => (
+  <FlexBox {...args}>
     <FlexItem xs={6} md={2} xl={4} padding={20}>
       Column 1
     </FlexItem>
@@ -27,12 +27,13 @@ export const Simple3Column = () => (
   </FlexBox>
 );
 
-export const Tiles = () => (
+export const Tiles = (args: any) => (
   <HorizontalFlexBox
     flexWrap="wrap"
     background="#efefef"
     width="100%"
     height="100%"
+    {...args}
   >
     {new Array(20).fill(null).map((_, i) => (
       <FlexItem sm={12} md={6} lg={4} xl={3} initial={3}>

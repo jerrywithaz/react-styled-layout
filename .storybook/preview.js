@@ -13,6 +13,7 @@ const GlobalStyles = createGlobalStyle`
     width: 100%;
     margin: 0px;
     padding: 0px;
+    font-family: 'Roboto', sans-serif;
   }
   .sb-show-main.sb-main-padded {
     padding: 0px;
